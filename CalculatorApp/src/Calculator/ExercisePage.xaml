@@ -2,11 +2,24 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Calculator.ExercisePage"
-             Title="Exercise">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+             Title="Exercise" BackgroundColor="White">
+    <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center">
+        <StackLayout Margin="0,0,0,50">
+            <Label x:Name="Problem" Text="14 + 25 = ?" TextColor="Black" FontSize="60" VerticalOptions="Center" HorizontalOptions="Center" IsVisible="true" />
+            <Image x:Name="RightResult"  Source="icon_done.png" HeightRequest="90" WidthRequest="90" IsVisible="false" />
+            <Image x:Name="WrongResult"  Source="icon_close.png" HeightRequest="90" WidthRequest="90" IsVisible="false" />
+        </StackLayout>
+        <StackLayout Margin="100,0,0,50" RadioButtonGroup.GroupName="Solution" RadioButtonGroup.SelectedValue="">
+            <RadioButton x:Name="PossibleResult1" TextColor="Black" Content="20" BackgroundColor="Transparent" FontSize="42"/>
+            <RadioButton x:Name="PossibleResult2" TextColor="Black" Content="30" BackgroundColor="Transparent" FontSize="42"/>
+            <RadioButton x:Name="PossibleResult3" TextColor="Black" Content="400" BackgroundColor="Transparent" FontSize="42"/>
+        </StackLayout>
+        <StackLayout>
+            <Button x:Name="RightButton" Text="Next" BackgroundColor="#2B0B98" TextColor="White" CornerRadius="25" FontSize="24" WidthRequest="150" HeightRequest="50" IsVisible="true" Clicked="NextButton_Clicked"/>
+            <HorizontalStackLayout x:Name="WrongButtons" HorizontalOptions="CenterAndExpand" IsVisible="false">
+                <Button Text="Try again" BackgroundColor="#2B0B98" TextColor="White" CornerRadius="25" FontSize="24" WidthRequest="120" HeightRequest="50" Margin="0,0,20,0" Clicked="AgainButton_Clicked"/>
+                <Button Text="Skip to Next" BackgroundColor="#2B0B98" TextColor="White" CornerRadius="25" FontSize="24" WidthRequest="160" HeightRequest="50" Clicked="SkipButton_Clicked"/>
+            </HorizontalStackLayout>
+        </StackLayout>
     </VerticalStackLayout>
 </ContentPage>
