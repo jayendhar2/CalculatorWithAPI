@@ -5,6 +5,7 @@
              Title="Exercise" BackgroundColor="White">
     <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center">
         <StackLayout Margin="0,0,0,50">
+            <Label x:Name="ProNumber" Text="Problem 1" TextColor="Black" FontSize="36" VerticalOptions="Center" HorizontalOptions="Center"/>
             <Label x:Name="Problem" Text="14 + 25 = ?" TextColor="Black" FontSize="60" VerticalOptions="Center" HorizontalOptions="Center" IsVisible="true" />
             <Image x:Name="RightResult"  Source="icon_done.png" HeightRequest="90" WidthRequest="90" IsVisible="false" />
             <Image x:Name="WrongResult"  Source="icon_close.png" HeightRequest="90" WidthRequest="90" IsVisible="false" />

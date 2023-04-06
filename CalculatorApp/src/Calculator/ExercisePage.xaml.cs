@@ -52,6 +52,7 @@ public partial class ExercisePage : ContentPage
         Button1.IsEnabled = true;
         if (currentProblemNum >= allProblems.Count())
         {
+            ProNumber.Text = "Correct Answers";
             Problem.Text = correctNum.ToString();
             Problem.TextColor = Color.FromRgb(255, 0, 0);
             Problem.FontAttributes = FontAttributes.Bold;
@@ -63,7 +64,7 @@ public partial class ExercisePage : ContentPage
             WrongButtons.IsVisible = false;
             return;
         }
-
+        ProNumber.Text = "Problem " + (currentProblemNum + 1);
         Problem currentProblem = allProblems[currentProblemNum];
         Problem.Text = currentProblem.problem.ToString();
         Problem.IsVisible = true;
