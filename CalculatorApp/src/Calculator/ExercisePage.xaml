@@ -9,14 +9,14 @@
             <Image x:Name="RightResult"  Source="icon_done.png" HeightRequest="90" WidthRequest="90" IsVisible="false" />
             <Image x:Name="WrongResult"  Source="icon_close.png" HeightRequest="90" WidthRequest="90" IsVisible="false" />
         </StackLayout>
-        <StackLayout Margin="100,0,0,50" RadioButtonGroup.GroupName="Solution" RadioButtonGroup.SelectedValue="">
+        <StackLayout Margin="100,0,0,50" RadioButtonGroup.GroupName="Solution" RadioButtonGroup.SelectedValue="" x:Name="PossibleResults">
             <RadioButton x:Name="PossibleResult1" TextColor="Black" Content="20" BackgroundColor="Transparent" FontSize="42" CheckedChanged="PossibleResult_CheckedChanged"/>
             <RadioButton x:Name="PossibleResult2" TextColor="Black" Content="30" BackgroundColor="Transparent" FontSize="42" CheckedChanged="PossibleResult_CheckedChanged"/>
             <RadioButton x:Name="PossibleResult3" TextColor="Black" Content="400" BackgroundColor="Transparent" FontSize="42" CheckedChanged="PossibleResult_CheckedChanged"/>
         </StackLayout>
         <StackLayout>
             <HorizontalStackLayout x:Name="RightButton" HorizontalOptions="CenterAndExpand" IsVisible="true">
-                <Button Text="Next" BackgroundColor="#2B0B98" TextColor="White" CornerRadius="25" FontSize="24" WidthRequest="300" HeightRequest="50" Clicked="NextButton_Clicked"/>
+                <Button Text="Next" BackgroundColor="#2B0B98" TextColor="White" CornerRadius="25" FontSize="24" WidthRequest="300" HeightRequest="50" Clicked="NextButton_Clicked" x:Name="Button1"/>
             </HorizontalStackLayout>
             <HorizontalStackLayout x:Name="WrongButtons" HorizontalOptions="CenterAndExpand" IsVisible="false">
                 <Button Text="Try again" BackgroundColor="#2B0B98" TextColor="White" CornerRadius="25" FontSize="24" WidthRequest="120" HeightRequest="50" Margin="0,0,20,0" Clicked="AgainButton_Clicked"/>
